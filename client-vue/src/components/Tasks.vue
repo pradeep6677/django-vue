@@ -1,5 +1,5 @@
 <template>
-    <div class="tasks_container">
+    <div class="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
         <div class="tasks_content">
             <h1>Tasks</h1>
             <table>
@@ -19,25 +19,28 @@
                     </td>
                 </tr>
             </table>
-            <!-- <ul class="tasks_list">
-                <li >
-                    <h2></h2>
-                    <p></p>
-                    
-                </li>
-            </ul> -->
         </div>
         <div class="add_task">
             <form v-on:submit.prevent="submitForm">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" v-model="title">
+                <div class="sm:col-span-3">
+                    <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+                    <div class="mt-2">
+                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                    </div>
                 </div>
-                <div class="form-group">
+
+                <div class="col-span-full">
+                    <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Description</label>
+                    <div class="mt-2">
+                        <textarea v-model="description" rows="2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                    </div>
+                </div>
+
+                <div class="form-group p-2">
                     <label for="description">Description</label>
-                    <textarea class="form-control" id="description" v-model="description"></textarea>
+                    <textarea class="form-control" id="description" ></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group p-2">
                     <button type="submit">Add Task</button>
                 </div>
             </form>
