@@ -128,11 +128,15 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
-""" CORS_ALLOW_METHODS = (
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS'
-) """
+
+DATABASES = {
+  'default': {
+    # MySQL engine. Powered by the mysqlclient module.
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'task_manager',
+    'USER': 'root',
+    'PASSWORD': 'admin@123',
+    'HOST': 'localhost',
+    'PORT': '3306',
+  }
+}

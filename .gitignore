@@ -1,2 +1,4 @@
 client-vue/node_modules
 client-vue/package-lock.json
+api-django/venv
+
