@@ -1,4 +1,5 @@
 client-vue/node_modules
 client-vue/package-lock.json
 api-django/venv/**
+api-django/django_rest_api/__pycache__
 
